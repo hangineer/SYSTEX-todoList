@@ -39,11 +39,11 @@ function addTodo(item) {
 
     // 點擊右鍵即可移除
     todoEl.addEventListener("contextmenu", (e) => {
-      e.preventDefault();
+      e.preventDefault(); //取消右鍵點擊的預設行為
       todoEl.remove();
       updateLS();
     });
-
+    // 新增至DOM裡，將子節點新增到父節點的尾巴
     todos.appendChild(todoEl);
     input.value = null;
   }
